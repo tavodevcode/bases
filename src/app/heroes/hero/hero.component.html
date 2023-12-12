@@ -1,0 +1,28 @@
+<section class="mt-5">
+    <dl>
+        <dt>Name: </dt>
+        <dd>{{ name }}</dd>
+    
+        <dt>Edad: </dt>
+        <dd>{{ age }}</dd>
+    
+        <dt>Metodo: </dt>
+        <dd>{{ getHeroDescription() }}</dd>
+    
+        <dt>Capitalizado: </dt>
+        <dd>{{ capitalizedName }}</dd>
+    </dl>
+    
+    <button
+        *ngIf="name !== 'Thor'" 
+        class="btn btn-primary px-3" 
+        (click)="handleChangeHero()"
+    >
+        Cambiar nombre
+    </button>
+    
+    <button class="btn btn-primary px-3 mx-2" (click)="handleChangeAge()">Cambiar edad</button>
+
+    <button class="btn btn-success px-3 mx-2" (click)="handleReset()">Reiniciar valores</button>
+
+</section>
